@@ -21,8 +21,8 @@ jobs:
       with:
           # 从仓库的 secret 获取值
           registry: registry.cn-chengdu.aliyuncs.com
-          username: wangchch5
-          password: wangchch8182
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
     - name: Build and push Docker image
       id: build-and-push
       uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
