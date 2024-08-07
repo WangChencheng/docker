@@ -24,6 +24,7 @@ jobs:
       uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
       with:
         file: highgo-exporter/Dockerfile-arm
+        context: ./highgo-exporter
         platforms: linux/arm64
         push: true
         tags: registry.cn-chengdu.aliyuncs.com/wangchch/highgo-exporter:1.0.0-arm64
