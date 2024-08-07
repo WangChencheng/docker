@@ -83,7 +83,7 @@ var lowestSupportedVersion = semver.MustParse("9.1.0")
 
 // Parses the version of postgres into the short version string we can use to
 // match behaviors.
-func parseVersion(versionString string, versionRegex *Regexp) (semver.Version, error) {
+func parseVersion(versionString string, versionRegex regexp.Regexp) (semver.Version, error) {
 	submatches := versionRegex.FindStringSubmatch(versionString)
 	if len(submatches) > 1 {
 		return semver.ParseTolerant(submatches[1])
@@ -581,7 +581,7 @@ func newDesc(subsystem, name, help string, labels prometheus.Labels) *prometheus
 	)
 }
 
-func checkPostgresVersion(db *sql.DB, server string, querySql string, versionRegex *Regexp) (semver.Version, string, error) {
+func checkPostgresVersion(db *sql.DB, server string, querySql string, versionRegex regexp.Regexp) (semver.Version, string, error) {
 	level.Debug(logger).Log("msg", "Querying PostgreSQL version", "server", server)
 	// versionRow := db.QueryRow("SELECT setting from pg_config where name='VERSION'")
 	versionRow := db.QueryRow(querySql)
