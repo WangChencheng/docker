@@ -33,4 +33,4 @@ jobs:
         file: Dockerfile
         context: .
         push: true
-        tags: registry.cn-chengdu.aliyuncs.com/wangchch/transfer:latest
+        tags: registry.cn-chengdu.aliyuncs.com/wangchch/gisapplication:11.3.0-amd64
