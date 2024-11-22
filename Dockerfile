@@ -1,4 +1,2 @@
-FROM ubuntu:16.04
-WORKDIR /opt
-RUN apt-get update && apt-get install -y wget
-RUN wget -O scala-plugin.zip http://download.scala-ide.org/sdk/lithium/e47/scala212/stable/update-site.zip
+FROM registry.cn-beijing.aliyuncs.com/supermap/gisapplication:11.3.0-amd64
+RUN apt-get update && apt-get install -y libxcb-shm0 libasound2 libpulse0
