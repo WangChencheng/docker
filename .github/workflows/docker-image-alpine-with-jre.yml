@@ -28,5 +28,5 @@ jobs:
         context: ./alpine-jre
         platforms: linux/arm64
         push: true
-        tags: registry.cn-chengdu.aliyuncs.com/wangchch/alpine-with-jre:jre17.0.13-arm64
+        tags: registry.cn-chengdu.aliyuncs.com/wangchch/alpine-with-jre:jre17.0.8-arm64
       
