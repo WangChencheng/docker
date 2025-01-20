@@ -8,5 +8,5 @@ ENV JAVA_VERSION=17.0.13
 ENV JAVA_ALPINE_VERSION=17.0.13_p11-r0
 RUN sed -i "s#https://dl-cdn.alpinelinux.org#http://mirrors.aliyun.com#g" /etc/apk/repositories;\
 apk update; \
-apk add --no-cache openjdk17=17.0.13_p11-r0 bash curl tini; \
+apk add --no-cache openjdk17 bash curl tini; \
 rm -rf /var/cache/apk/*
