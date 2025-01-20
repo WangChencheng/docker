@@ -1,4 +1,4 @@
-name: Alpine with jre Docker Image CI
+name: Docker Image CI
 on:
   push:
     paths:
